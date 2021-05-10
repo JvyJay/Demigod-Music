@@ -1,0 +1,116 @@
+body {
+  color: #1e1e1e;
+  background-color: #000;
+  font-family: 'Lexend', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+i {
+  cursor: pointer;
+}
+
+.hidden /* Page Before Load */ {
+  opacity: 0;
+}
+
+.visible /* Fade ins */ {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.3;
+}
+
+.player /* Container */ {
+  background-color: rgb(20, 20, 20);
+  color: #fff;
+  margin: auto;
+  width: 500px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artwork /* Demigod Logo */ {
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.artistTrack /* Artist-Track Text Container */ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.track,
+.artist {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.artist {
+  font-weight: bolder;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#progress {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.slider {
+  height: 5px;
+  background-color: rgb(194, 194, 194);
+}
+
+.progress-bar /* Shows tracks progression */ {
+  background-color: rgb(97, 36, 36);
+  position: absolute;
+  pointer-events: none;
+  height: 5px;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.btn-controls /* Controls Container */ {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0px 20px 20px 20px;
+}
+
+/* Media Queries */
+@media only screen and (min-device-width: 300px) and (max-device-width: 520px) {
+  .player {
+    width: 80%;
+  }
+}

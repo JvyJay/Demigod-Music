@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+    <title>Demigod Player</title>
+    <link rel=stylesheet href="/css/style.css" media=all>
+</head>
+<body>
+    <script>
+        document.body.className = 'hidden';
+      </script>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="/img/MVI_002613.mov">
+    </video>
+
+    <div class="player">
+        <!-- Artwork & artist/track -->
+        <div class="artwork">
+            <img src="/img/MOSHED-2021-3-30-19-40-32.gif" alt="Demigod Logo">
+        </div>
+        <div class="artistTrack">
+            <div class="artist"></div>
+            <div class="track"></div>
+        </div>
+
+        <!-- Time duration & track progression bar -->
+        <div class="progress-container">
+            <div id="progress">
+                <div class="time">
+                    <span class="current-time">0:00</span>
+                    <span class="total-time">00:00</span>
+                </div>
+                <div class="slider">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button controls -->
+        <div class="btn-controls">
+                <div>
+                    <i class="fas fa-redo" id="loop"></i>
+                </div>
+            
+                <div id="btn-back">
+                    <i class='fas fa-step-backward'></i>
+                </div>
+
+                <div class="btn-rewind">
+                    <i class='fas fa-backward'></i>
+                  </div>
+
+                <div>
+                    <i class='fas fa-play' id="btn-toggle"></i>
+                </div>
+
+                <div class="btn-forward">
+                    <i class='fas fa-forward'></i>
+                  </div>
+
+                <div id="btn-next">
+                    <i class='fas fa-step-forward'></i>
+                  </div>
+
+                  <div class="btn-shuffle">
+                    <i class="fas fa-random"></i>
+                </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="/js/data.js"></script>
+<script type="module" src="/js/main.js"></script>
+</html>
